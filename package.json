@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "tsup --watch --onSuccess \"pnpm start-dist-both \"",
     "start-dist-both": "concurrently \"pnpm start-dist-api\" \"pnpm start-dist-ws\"",
+    "start": "node dist/index.js",
     "start-dist-api": "node --trace-warnings --enable-source-maps dist/index.mjs --api",
     "start-dist-ws": "node --trace-warnings --enable-source-maps dist/index.mjs --ws",
     "start-api": "tsup --onSuccess \"node --trace-warnings --enable-source-maps dist/index.mjs --api \"",
